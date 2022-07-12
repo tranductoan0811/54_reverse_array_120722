@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <h1 style="font-size: 16px; font-weight: bold; color: red;">Đảo ngược các phần tử trong mảng không sử dụng phương thức reverse</h1>
+
+</head>
+<body>
+  <!-- Viết một chương trình JavaScript thực hiện đảo ngược các giá trị trong một mảng đã cho. 
+  Không sử dụng phương thức reverse() -->
+
+  <script>
+    var arrs = [-3,5,1,3,2,10];
+    let first_element = 0;
+    let last_element = arrs.length-1;
+    document.write("*********************" + "<br>");
+    document.write("the original array is:  " + arrs + "<br>");
+
+    // Dùng vòng lặp chạy với điều kiện first < last, trong quá trình lặp đổi chỗ phần tử đầu tiên và cuối cùng cho nhau. Sau đó tăng biến first lên 1 để duyệt phần tử tiếp theo, giảm last đi một.
+
+    while (first_element < last_element) {
+      let b = arrs[first_element];
+      arrs[first_element] = arrs[last_element];
+      arrs[last_element] = b;
+      first_element++;
+      last_element--;
+    }
+
+    document.write("reverse array is: " + arrs + "<br>");
+
+  </script>
+
+</body>
+
+
+</html>
